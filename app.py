@@ -229,7 +229,7 @@ section[data-testid="stSidebar"] [role="radiogroup"] input {
 
 /* Garantir contraste nos textos dos quadros */
 .stApp [data-testid="stMain"] .stAlert * {
-    color: #17365D !important;
+    color: #A9C9EA !important;
     opacity: 1 !important;
 }
 </style>
