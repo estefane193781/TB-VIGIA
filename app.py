@@ -139,34 +139,36 @@ div[data-testid="stMetricValue"] span {
 /* =========================================
    CORREÇÃO DE CONTRASTE DOS AVISOS
 ========================================= */
-
-/* Caixas st.info, st.warning, st.success e st.error */
+/* PADRONIZAÇÃO DAS CAIXAS DE AVISO */
 div[data-testid="stAlert"] {
-    background-color: #EAF2FB !important;
-    border: 1px solid #A9C9EA!important;
+    background: #DCEEFF !important;
+    background-color: #DCEEFF !important;
+    border: 1px solid #A9C9EA !important;
     border-radius: 10px !important;
+}
+
+/* Remove fundos internos que podem continuar roxos */
+div[data-testid="stAlert"] > div,
+div[data-testid="stAlert"] [data-testid="stAlertContent"] {
+    background: transparent !important;
+    background-color: transparent !important;
 }
 
 /* Texto dos avisos */
 div[data-testid="stAlert"] p,
 div[data-testid="stAlert"] span,
-div[data-testid="stAlert"] div,
-div[data-testid="stAlert"] li {
+div[data-testid="stAlert"] li,
+div[data-testid="stAlert"] div {
     color: #17365D !important;
+    -webkit-text-fill-color: #17365D !important;
     opacity: 1 !important;
 }
 
-/* Ícones dos avisos */
+/* Ícones */
 div[data-testid="stAlert"] svg {
     color: #174A8B !important;
     fill: #174A8B !important;
 }
-/* FORÇAR CONTRASTE DO TEXTO DOS AVISOS */
-div[data-testid="stAlert"] {
-    background-color: #EAF2FB !important;
-    border: 1px solid #B7CBE3 !important;
-}
-
 div[data-testid="stAlert"] * {
     color: #17365D !important;
     opacity: 1 !important;
