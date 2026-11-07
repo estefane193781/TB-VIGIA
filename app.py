@@ -1380,126 +1380,379 @@ elif page == "Fatores associados":
 # PÁGINA 4 — CLASSIFICAÇÃO DE RISCO
 # =====================================================
 elif page == "Classificação de risco de abandono":
+
     st.write(
         "Questionário demonstrativo de fatores que podem "
         "dificultar a continuidade do tratamento da tuberculose."
     )
-    
+
+    # Estilo visual dos cartões e botão
+    st.markdown("""
+    <style>
+    section[data-testid="stMain"] div[data-testid="stVerticalBlockBorderWrapper"] {
+        background-color: #FFFFFF !important;
+        border: 1px solid #DCE6F1 !important;
+        border-radius: 14px !important;
+        padding: 12px !important;
+        box-shadow: 0 2px 7px rgba(16, 45, 89, 0.06);
+    }
+
+    div[data-testid="stPlotlyChart"] {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    div[data-testid="stFormSubmitButton"] > button {
+        background-color: #5369B5 !important;
+        color: white !important;
+        font-weight: bold !important;
+        border: none !important;
+        border-radius: 10px !important;
+        min-height: 45px !important;
+    }
+
+    div[data-testid="stFormSubmitButton"] > button p {
+        color: white !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+    # =================================================
+    # FORMULÁRIO
+    # =================================================
 
     with st.form("formulario_risco_abandono"):
+
         st.markdown("### 1. Características")
+
         idade = st.selectbox(
             "Faixa etária",
-            ["Selecione", "Menor de 20 anos", "20 a 59 anos", "60 anos ou mais"]
+            [
+                "Selecione",
+                "Menor de 20 anos",
+                "20 a 59 anos",
+                "60 anos ou mais"
+            ]
         )
+
         sexo = st.selectbox(
-            "Sexo", ["Selecione", "Masculino", "Feminino"]
+            "Sexo",
+            ["Selecione", "Masculino", "Feminino"]
         )
+
         escolaridade = st.selectbox(
             "Escolaridade",
-            ["Selecione", "Sem escolaridade", "Ensino fundamental",
-             "Ensino médio", "Ensino superior"]
+            [
+                "Selecione",
+                "Sem escolaridade",
+                "Ensino fundamental",
+                "Ensino médio",
+                "Ensino superior"
+            ]
         )
 
         st.markdown("### 2. Fatores associados")
-        alcool = st.radio("Uso de álcool", ["Não", "Sim"], horizontal=True)
-        drogas = st.radio("Uso de outras drogas", ["Não", "Sim"], horizontal=True)
-        hiv = st.radio(
-            "Coinfecção TB/HIV", ["Não", "Sim", "Não informado"],
+
+        alcool = st.radio(
+            "Uso de álcool",
+            ["Não", "Sim"],
             horizontal=True
         )
+
+        drogas = st.radio(
+            "Uso de outras drogas",
+            ["Não", "Sim"],
+            horizontal=True
+        )
+
+        hiv = st.radio(
+            "Coinfecção TB/HIV",
+            ["Não", "Sim", "Não informado"],
+            horizontal=True
+        )
+
         distancia = st.selectbox(
             "Distância até a unidade de saúde",
-            ["Selecione", "Até 5 km", "Entre 5 e 20 km", "Mais de 20 km"]
+            [
+                "Selecione",
+                "Até 5 km",
+                "Entre 5 e 20 km",
+                "Mais de 20 km"
+            ]
         )
+
         historico_abandono = st.radio(
             "Histórico de abandono de tratamento",
-            ["Não", "Sim"], horizontal=True
+            ["Não", "Sim"],
+            horizontal=True
         )
-        st.markdown("""
-<style>
-/* Cartões dos gráficos de fatores associados */
-section[data-testid="stMain"] div[data-testid="stVerticalBlockBorderWrapper"] {
-    background-color: #FFFFFF !important;
-    border: 1px solid #DCE6F1 !important;
-    border-radius: 14px !important;
-    padding: 12px !important;
-    box-shadow: 0 2px 7px rgba(16, 45, 89, 0.06);
-}
 
-/* Espaçamento interno dos gráficos */
-div[data-testid="stPlotlyChart"] {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-}
-div.stButton > button,
-div[data-testid="stFormSubmitButton"] > button {
-    background-color: #5369B5 !important;
-    color: white !important;
-    font-weight: bold !important;
-    border: none !important;
-    border-radius: 10px !important;
-    min-height: 45px !important;
-    opacity: 1 !important;
-}
-
-div[data-testid="stFormSubmitButton"] > button p {
-    color: white !important;
-}
-</style>
-""", unsafe_allow_html=True)
         enviar = st.form_submit_button(
             "Calcular classificação demonstrativa",
             use_container_width=True
         )
+
+    # =================================================
+    # RESULTADO — SÓ APARECE APÓS CLICAR NO BOTÃO
+    # =================================================
+
     if enviar:
+
         if "Selecione" in [idade, sexo, escolaridade, distancia]:
-            st.error("Preencha os campos obrigatórios.")
+
+            st.error("Preencha todos os campos obrigatórios antes de calcular.")
+
         else:
+
+            # =============================================
+            # CÁLCULO DA PONTUAÇÃO
+            # =============================================
+
             fatores = {
                 "Faixa etária": 1 if idade in [
-                    "Menor de 20 anos", "60 anos ou mais"
+                    "Menor de 20 anos",
+                    "60 anos ou mais"
                 ] else 0,
+
                 "Escolaridade": 1 if escolaridade in [
-                    "Sem escolaridade", "Ensino fundamental"
+                    "Sem escolaridade",
+                    "Ensino fundamental"
                 ] else 0,
+
                 "Uso de álcool": 1 if alcool == "Sim" else 0,
+
                 "Uso de outras drogas": 2 if drogas == "Sim" else 0,
+
                 "Coinfecção TB/HIV": 2 if hiv == "Sim" else 0,
+
                 "Distância da unidade": (
                     1 if distancia == "Entre 5 e 20 km"
                     else 2 if distancia == "Mais de 20 km"
                     else 0
                 ),
-                "Histórico de abandono": 3 if historico_abandono == "Sim" else 0,
+
+                "Histórico de abandono": (
+                    3 if historico_abandono == "Sim" else 0
+                ),
             }
 
             pontuacao = sum(fatores.values())
 
+            # =============================================
+            # CLASSIFICAÇÃO E ORIENTAÇÕES
+            # =============================================
+
             if pontuacao <= 2:
+
                 classificacao = "ATENÇÃO HABITUAL"
+                titulo_orientacao = "Acompanhamento de rotina"
                 cor = "#20A45A"
+
                 orientacao = (
-                    "Manter acompanhamento regular na unidade de saúde, "
-                    "consultas e retirada dos medicamentos conforme orientação."
+                    "Seu resultado indica necessidade de acompanhamento "
+                    "habitual. Continue comparecendo às consultas, utilizando "
+                    "os medicamentos conforme a orientação da equipe de saúde "
+                    "e realizando o tratamento até o final. Caso encontre "
+                    "alguma dificuldade, converse com o profissional "
+                    "responsável pelo seu acompanhamento."
                 )
 
             elif pontuacao <= 5:
+
                 classificacao = "ATENÇÃO AMPLIADA"
+                titulo_orientacao = "Acompanhamento reforçado"
                 cor = "#F39C12"
+
                 orientacao = (
-                    "Avaliar barreiras de acesso, necessidade de contato mais "
-                    "próximo com a equipe e apoio social."
+                    "Seu resultado indica a necessidade de maior atenção "
+                    "durante o tratamento. É importante manter contato "
+                    "frequente com a equipe de saúde, comparecer às consultas "
+                    "e comunicar qualquer dificuldade para tomar os "
+                    "medicamentos ou seguir o tratamento. O apoio dos "
+                    "profissionais pode ajudar a evitar interrupções."
                 )
 
             else:
+
                 classificacao = "ATENÇÃO PRIORITÁRIA"
+                titulo_orientacao = "Acompanhamento prioritário"
                 cor = "#D62828"
+
                 orientacao = (
-                    "Recomenda-se avaliação individual pela equipe responsável "
-                    "e planejamento de apoio multiprofissional."
+                    "Seu resultado indica necessidade de acompanhamento "
+                    "prioritário. Procure a equipe de saúde para conversar "
+                    "sobre possíveis dificuldades durante o tratamento e "
+                    "receber o apoio necessário. A equipe poderá organizar "
+                    "um acompanhamento mais próximo e ajudar a evitar "
+                    "o abandono."
                 )
 
+            # =============================================
+            # EXIBIÇÃO DA CLASSIFICAÇÃO
+            # =============================================
+
+            st.markdown("## Resultado da classificação")
+
+            st.markdown(
+                f"""
+                <div style="
+                    background-color: {cor}18;
+                    border-left: 6px solid {cor};
+                    padding: 18px;
+                    border-radius: 10px;
+                    margin: 15px 0;
+                ">
+                    <h3 style="color: {cor}; margin: 0;">
+                        {classificacao}
+                    </h3>
+                    <p style="color: #20344D; margin-bottom: 0;">
+                        Resultado demonstrativo da avaliação.
+                    </p>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
+            c1, c2 = st.columns(2)
+
+            c1.metric(
+                "Pontuação ilustrativa",
+                f"{pontuacao} / 11"
+            )
+
+            c2.metric(
+                "Classificação",
+                 classificacao
+            )
+
+            # =============================================
+            # GRÁFICO DOS FATORES
+            # =============================================
+
+            st.markdown("### Pontuação atribuída aos fatores")
+
+            grafico_fatores = pd.DataFrame([
+                {
+                    "Fator": chave,
+                    "Pontuação": valor
+                }
+                for chave, valor in fatores.items()
+            ])
+
+            grafico_fatores = grafico_fatores[
+                grafico_fatores["Pontuação"] > 0
+            ].sort_values(
+                "Pontuação",
+                ascending=True
+            )
+
+            if not grafico_fatores.empty:
+
+                fig = px.bar(
+                    grafico_fatores,
+                    x="Pontuação",
+                    y="Fator",
+                    orientation="h",
+                    text="Pontuação",
+                    color_discrete_sequence=[cor]
+                )
+
+                fig.update_traces(
+                    textposition="outside",
+                    cliponaxis=False,
+                    texttemplate="%{text} ponto(s)",
+                    textfont=dict(
+                        size=12,
+                        color="#20344D"
+                    )
+                )
+
+                fig.update_layout(
+                    height=420,
+                    paper_bgcolor="white",
+                    plot_bgcolor="white",
+                    xaxis_title="Pontuação",
+                    yaxis_title="",
+                    showlegend=False,
+                    margin=dict(
+                        l=20,
+                        r=90,
+                        t=30,
+                        b=40
+                    ),
+                    xaxis=dict(
+                        dtick=1,
+                        rangemode="tozero"
+                    ),
+                    font=dict(
+                        family="Arial",
+                        color="#20344D"
+                    )
+                )
+
+                st.plotly_chart(
+                    fig,
+                    use_container_width=True
+                )
+
+            else:
+
+                st.info(
+                    "Nenhum dos fatores avaliados recebeu pontuação."
+                )
+
+            # =============================================
+            # ORIENTAÇÕES AO USUÁRIO
+            # =============================================
+
+            st.markdown("### Orientações ao usuário")
+
+            st.markdown(
+                f"#### {titulo_orientacao}"
+            )
+
+            st.info(orientacao)
+
+            # =============================================
+            # ONDE BUSCAR AJUDA
+            # =============================================
+
+            st.markdown(
+                """
+                <div style="
+                    background-color: #EAF2FB;
+                    border-left: 5px solid #1769AA;
+                    padding: 18px;
+                    border-radius: 10px;
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    color: #20344D;
+                ">
+                    <h4 style="color: #102D59; margin-top: 0;">
+                        Onde buscar ajuda?
+                    </h4>
+                    <p style="color: #20344D;">
+                        Procure a Unidade Básica de Saúde (UBS) mais próxima
+                        para receber orientações, acompanhamento e apoio
+                        durante o tratamento da tuberculose.
+                    </p>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
+            # =============================================
+            # AVISO METODOLÓGICO
+            # =============================================
+
+            st.warning(
+                "Importante: a classificação apresentada pelo TB-VIGIA "
+                "possui finalidade exclusivamente educativa e demonstrativa. "
+                "A pontuação não representa diagnóstico nem previsão clínica "
+                "validada de abandono do tratamento. O resultado não substitui "
+                "a avaliação individual do paciente nem a decisão dos "
+                "profissionais de saúde."
+            )
             # RESULTADO
             st.markdown(
                 f"""
