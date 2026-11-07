@@ -2,3 +2,4 @@ streamlit
 pandas
 plotly
 geobr
+duckdb<2
