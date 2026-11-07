@@ -2026,100 +2026,50 @@ elif page == "Relatórios":
             mime="text/csv",
             use_container_width=True
         )
-
-    # =====================================================
-# PÁGINA 6 — SOBRE O SISTEMA
+# =====================================================
+# PÁGINA — SOBRE O SISTEMA
 # =====================================================
 elif page == "Sobre o sistema":
 
     st.markdown("## Sobre o TB-VIGIA")
 
-    st.markdown("### 1. Apresentação")
+    st.write("""
+    O TB-VIGIA é uma plataforma acadêmica de monitoramento
+    epidemiológico da tuberculose no estado do Amazonas.
+    Desenvolvida para organizar e visualizar dados sobre casos
+    confirmados, desfechos do tratamento e fatores associados.
+    """)
+
+    st.markdown("### Funcionalidades")
+
+    c1, c2 = st.columns(2)
+
+    with c1:
+        st.info("📊 **Indicadores epidemiológicos**\n\nVisualização de casos e desfechos.")
+
+        st.info("👥 **Fatores associados**\n\nPerfil sociodemográfico e epidemiológico.")
+
+    with c2:
+        st.info("🗺️ **Distribuição municipal**\n\nGráficos e mapas por município.")
+
+        st.info("⚠️ **Classificação demonstrativa**\n\nQuestionário ilustrativo de fatores relacionados ao abandono.")
+
+    st.markdown("### Fonte dos dados")
 
     st.write("""
-    O TB-VIGIA é uma plataforma desenvolvida com a finalidade
-    de reunir, organizar e apresentar informações epidemiológicas sobre
-    a tuberculose no estado do Amazonas.
-
-    A ferramenta permite visualizar indicadores relacionados aos casos
-    confirmados, desfechos do tratamento e características
-    sociodemográficas, contribuindo para a compreensão do cenário
-    epidemiológico da doença.
+    Dados agregados do SINAN/DATASUS, referentes ao período
+    de 2019 a 2025, organizados por município de residência.
     """)
-    st.markdown("### 3. Funcionalidades")
 
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.markdown("""
-        <div style="background:#EAF2FB; padding:17px; border-radius:10px;
-        margin-bottom:12px; color:#20344D;">
-            <h4 style="color:#174A8B;">Monitoramento epidemiológico</h4>
-            Visualização de casos confirmados e desfechos do tratamento.
-        </div>
-        """, unsafe_allow_html=True)
-
-        st.markdown("""
-        <div style="background:#EAF2FB; padding:17px; border-radius:10px;
-        color:#20344D;">
-            <h4 style="color:#174A8B;">Fatores associados</h4>
-            Análise de informações sociodemográficas e características
-            relacionadas aos registros.
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col2:
-        st.markdown("""
-        <div style="background:#EAF2FB; padding:17px; border-radius:10px;
-        margin-bottom:12px; color:#20344D;">
-            <h4 style="color:#174A8B;">Distribuição municipal</h4>
-            Apresentação de informações por município e mapas temáticos.
-        </div>
-        """, unsafe_allow_html=True)
-
-        st.markdown("""
-        <div style="background:#EAF2FB; padding:17px; border-radius:10px;
-        color:#20344D;">
-            <h4 style="color:#174A8B;">Classificação demonstrativa</h4>
-            Questionário de estratificação de fatores que podem dificultar
-            a continuidade do tratamento.
-        </div>
-        """, unsafe_allow_html=True)
-
-    st.markdown("### 4. Fonte e período dos dados")
+    st.markdown("### Limitações")
 
     st.write("""
-    O sistema utiliza dados epidemiológicos provenientes de arquivos
-    extraídos do Sistema de Informação de Agravos de Notificação (SINAN),
-    disponibilizados por meio do DATASUS.
-
-    O período de análise contemplado nesta versão corresponde aos anos
-    de 2019 a 2025, considerando os registros disponíveis nas bases
-    utilizadas para o desenvolvimento do protótipo.
+    A classificação apresentada possui finalidade educativa
+    e demonstrativa, não sendo um instrumento clínico validado.
+    Os indicadores dependem da disponibilidade e completude
+    das bases utilizadas.
     """)
 
-    st.markdown("### 5. Metodologia e limitações")
-
-    st.write("""
-    Os dados foram organizados em tabelas e indicadores para permitir
-    consultas, comparações e visualizações epidemiológicas.
-
-    A classificação de risco de abandono do tratamento possui caráter
-    exclusivamente demonstrativo e educativo. A pontuação foi elaborada
-    para ilustrar a análise de fatores que podem dificultar a continuidade
-    do tratamento, não constituindo instrumento clínico validado ou
-    preditor individual de abandono.
-
-    """)
-
-    st.markdown("### 6. Finalidade")
-
-    st.info("""
-    O TB-VIGIA busca contribuir para a organização e interpretação
-    das informações epidemiológicas da tuberculose no Amazonas,
-    oferecendo um ambiente de consulta e visualização de dados que
-    possa apoiar atividades acadêmicas, educativas e discussões
-    relacionadas à vigilância em saúde.
-    """)
-
-    st.caption("TB-VIGIA | Protótipo acadêmico | Dados epidemiológicos de 2019 a 2025")
+    st.caption(
+        "TB-VIGIA | Protótipo acadêmico | Amazonas – Brasil"
+    )
