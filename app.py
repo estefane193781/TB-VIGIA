@@ -161,7 +161,22 @@ div[data-testid="stAlert"] svg {
     color: #174A8B !important;
     fill: #174A8B !important;
 }
+/* FORÇAR CONTRASTE DO TEXTO DOS AVISOS */
+div[data-testid="stAlert"] {
+    background-color: #EAF2FB !important;
+    border: 1px solid #B7CBE3 !important;
+}
 
+div[data-testid="stAlert"] * {
+    color: #17365D !important;
+    opacity: 1 !important;
+    -webkit-text-fill-color: #17365D !important;
+}
+
+div[data-testid="stAlert"] svg {
+    color: #174A8B !important;
+    fill: #174A8B !important;
+}
 /* =========================================
    CORREÇÃO DA NAVEGAÇÃO LATERAL
 ========================================= */
