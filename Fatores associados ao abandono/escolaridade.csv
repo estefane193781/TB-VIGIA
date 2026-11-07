@@ -1,0 +1,114 @@
+TUBERCULOSE - Casos confirmados notificados no Sistema de Informação de Agravos de Notificação - Amazonas
+Casos confirmados por Reg.Saúde/Município de residên e Escolaridade
+Ano Diagnóstico: 2019, 2020, 2021, 2022, 2023, 2024, 2025
+Período:2019-2025
+"Reg.Saúde/Município de residên";"Ign/Branco";"Analfabeto";"1ª a 4ª série incompleta do EF";"4ª série completa do EF";"5ª a 8ª série incompleta do EF";"Ensino fundamental completo";"Ensino médio incompleto";"Ensino médio completo";"Educação superior incompleta";"Educação superior completa";"Não se aplica";"Total"
+"13001 Manaus, Entorno e Alto Rio Negro";6136;495;1887;942;3364;1756;2498;6106;556;923;668;25331
+".....  CAREIRO DA VARZEA";25;3;5;4;6;1;4;11;1;-;2;62
+".....  MANAQUIRI";31;2;14;3;18;9;9;4;1;3;3;97
+".....  IRANDUBA";57;19;84;33;101;59;51;88;6;7;12;517
+".....  MANAUS";5774;414;1635;821;3037;1597;2308;5710;538;885;569;23288
+".....  SANTA ISABEL DO RIO NEGRO";6;10;7;2;5;2;5;28;2;1;10;78
+".....  AUTAZES";19;6;36;27;37;17;24;28;2;4;8;208
+".....  NOVA OLINDA DO NORTE";50;5;19;5;20;9;12;17;1;5;3;146
+".....  BARCELOS";15;9;15;6;13;4;14;11;-;1;6;94
+".....  PRESIDENTE FIGUEIREDO";20;1;19;11;42;10;16;32;4;5;3;163
+".....  CAREIRO";21;9;15;11;33;14;11;43;-;7;5;169
+".....  RIO PRETO DA EVA";19;7;16;4;29;12;18;40;1;-;5;151
+".....  SAO GABRIEL DA CACHOEIRA";99;10;22;15;23;22;26;94;-;5;42;358
+"13002 Rio Negro e Solimões";199;101;269;142;244;92;194;356;17;32;60;1706
+".....  NOVO AIRAO";5;4;27;12;19;3;11;17;2;1;4;105
+".....  CAAPIRANGA";16;5;4;1;8;-;4;10;-;1;-;49
+".....  CODAJAS";17;4;9;2;8;6;8;12;1;3;6;76
+".....  BERURI";10;1;8;1;9;-;3;6;-;-;1;39
+".....  ANORI";18;3;14;3;8;3;1;3;-;-;4;57
+".....  COARI";21;40;72;16;77;17;47;86;10;16;16;418
+".....  MANACAPURU";106;41;134;107;113;61;116;219;4;9;28;938
+".....  ANAMA";6;3;1;-;2;2;4;3;-;2;1;24
+"13003 Rio Madeira";72;26;104;104;82;41;60;104;8;10;12;623
+".....  NOVO ARIPUANA";4;1;16;7;24;4;9;31;-;1;1;98
+".....  MANICORE";6;14;23;23;18;16;21;17;1;4;3;146
+".....  HUMAITA";47;5;42;61;17;10;22;31;4;3;2;244
+".....  APUI";6;-;2;6;6;3;1;4;1;-;2;31
+".....  BORBA";9;6;21;7;17;8;7;21;2;2;4;104
+"13004 Médio Amazonas";64;33;103;56;113;63;80;162;17;21;23;735
+".....  ITAPIRANGA";1;1;2;4;3;1;2;9;1;-;-;24
+".....  SAO SEBASTIAO DO UATUMA";6;1;6;2;8;5;7;6;-;3;1;45
+".....  SILVES";5;1;5;2;6;2;-;9;1;2;-;33
+".....  URUCURITUBA";4;4;14;10;10;9;10;9;-;1;4;75
+".....  URUCARA";9;1;4;2;6;4;6;17;-;-;-;49
+".....  ITACOATIARA";39;25;72;36;80;42;55;112;15;15;18;509
+"13005 Baixo Amazonas";101;45;139;68;138;125;131;311;20;36;35;1149
+".....  BOA VISTA DO RAMOS";5;1;6;2;10;4;8;19;2;1;1;59
+".....  PARINTINS";41;14;43;19;50;83;61;172;14;22;9;528
+".....  BARREIRINHA";9;9;17;11;18;16;14;28;2;3;5;132
+".....  MAUES";40;17;62;32;57;16;34;60;2;8;16;344
+".....  NHAMUNDA";6;4;11;4;3;6;14;32;-;2;4;86
+"13006 Regional Purus";110;83;85;46;41;32;27;44;-;9;6;483
+".....  TAPAUA";20;19;7;7;4;4;-;3;-;1;3;68
+".....  BOCA DO ACRE";23;29;41;27;17;14;9;14;-;3;1;178
+".....  CANUTAMA";5;3;8;1;-;2;4;5;-;-;-;28
+".....  LABREA";58;25;22;5;12;10;10;14;-;4;2;162
+".....  PAUINI";4;7;7;6;8;2;4;8;-;1;-;47
+"13007 Regional Juruá";38;84;49;6;14;13;13;23;2;4;9;255
+".....  IPIXUNA";9;22;5;-;4;2;1;2;-;-;1;46
+".....  CARAUARI";6;7;10;1;6;2;6;8;1;2;1;50
+".....  ENVIRA";-;26;15;-;-;-;1;3;-;1;1;47
+".....  GUAJARA";1;4;3;3;1;4;3;-;1;-;-;20
+".....  EIRUNEPE";8;19;12;1;2;2;2;6;-;1;4;57
+".....  ITAMARATI";14;6;4;1;1;3;-;4;-;-;2;35
+"13008 Triângulo";133;52;94;43;89;50;72;139;5;22;16;715
+".....  UARINI";-;2;2;2;3;1;3;8;-;1;1;23
+".....  MARAA";7;3;10;1;4;1;1;7;-;-;2;36
+".....  JURUA";4;5;4;-;4;1;1;2;-;2;2;25
+".....  JAPURA";4;1;2;3;-;2;4;1;-;-;2;19
+".....  TEFE";116;37;71;35;77;43;57;113;5;19;7;580
+".....  ALVARAES";2;4;5;2;1;2;6;8;-;-;2;32
+"13009 Alto Solimões";264;63;115;56;82;63;64;128;8;27;45;915
+".....  JUTAI";9;4;22;12;16;6;3;6;-;1;3;82
+".....  FONTE BOA";8;1;12;6;2;3;1;7;-;2;3;45
+".....  ATALAIA DO NORTE";10;8;4;3;6;4;4;6;-;2;8;55
+".....  TABATINGA";129;25;35;24;32;32;24;37;3;11;10;362
+".....  SAO PAULO DE OLIVENCA";56;7;4;2;4;2;8;8;1;1;8;101
+".....  AMATURA";8;-;3;1;1;2;-;7;-;2;2;26
+".....  BENJAMIN CONSTANT";28;13;12;2;11;8;13;23;2;3;6;121
+".....  TONANTINS";8;-;8;2;2;4;4;11;-;-;3;42
+".....  SANTO ANTONIO DO ICA";8;5;15;4;8;2;7;23;2;5;2;81
+"Total";7117;982;2845;1463;4167;2235;3139;7373;633;1084;874;31912
+ Fonte: Ministério da Saúde/SVSA - Sistema de Informação de Agravos de Notificação - Sinan Net 
+ Notas:
+ 
+ Excluídos os registros encerrados com mudança de diagnóstico.
+ Períodos disponíveis - Correspondem aos anos de diagnóstico dos casos (até 2024).
+ Para tabular dados epidemiológicos de um determinado ano selecione na linha a variável de interesse,
+     e na coluna a variável "Ano do diagnóstico"; em "Períodos Disponíveis" assinale o ano inicial da série
+     e todos os posteriores até o ano atual (para incluir casos notificados com atraso) e em "Seleções Disponíveis"
+     assinale os anos do diagnóstico: - Ex. para tabular o nº de casos diagnosticados em 2007 segundo UF de residência
+     selecione: na linha a "UF de residência" na Coluna a variável "Ano do diagnóstico" em Períodos disponíveis 2007
+     até o ano atual em Seleções o "Ano do diagnóstico" de 2007.
+ Para cálculo da incidência selecione o local de residência e as seguintes categorias da variável "Tipo de entrada":
+     caso novo, não sabe e pós óbito.
+ A variável "Beneficiário de programa de transferência de renda do governo" não contém dados do Estado de São Paulo (SP).
+     Quanto a variável "Terapia antirretroviral durante o tratamento da TB", os dados do estado de SP foram inseridos
+     a partir do segundo semestre de 2016.
+ Não é possível calcular indicadores relacionados aos contatos de tuberculose.
+ Em 2014, foram incluídas as seguintes variáveis no Sinan Net (Tuberculose): populações especiais (população privada de
+     liberdade, população em situação de rua, profissional de saúde e imigrante), doenças e agravos associados (uso de drogas
+     ilícitas e tabagismo), beneficiário de programa de transferência de renda do governo, terapia antirretroviral durante o
+     tratamento para a TB, teste molecular rápido TB (TRM-TB) e teste de sensibilidade; as categorias: pós-óbito na variável
+     tipo de entrada; e as categorias: mudança de esquema, falência e abandono primário na variável situação de encerramento.
+     Por conta disso, não há informações para essas variáveis em anos anteriores.
+ A variável "institucionalizado" foi descontinuada em 2015. Portanto, para análise referente à população privada de
+     liberdade após esse período, utilizar a variável "PPL" (população privada de liberdade).
+ Para informações detalhadas sobre o Sinan – Tuberculose e sobre as análises de indicadores epidemiológicos e operacionais
+     da tuberculose, acessar o link: http://portalsinan.saude.gov.br/tuberculose
+ Em caso de dúvidas, encaminhar e-mail para: tuberculose@saude.gov.br
+ Dados de 2001 a 2019 estão finalizados.
+ Dados de 2019 passaram por correção em setembro/2025.
+ Dados de 2020 a 2025 atualizados em Abril/2026, sujeitos à revisão.
+ Dados a partir de 2020 referentes ao estado do Espírito Santo são oriundos do Sistema de Informação e-SUS VS, em uso
+     pelo estado desde janeiro de 2020.
+ Dados referentes ao estado de São Paulo são oriundos do Sistema de Controle de Pacientes com Tuberculose TBWEB.
+  Dados disponibilizados no TABNET em 05/2026, após homologação da Coordenação Geral de Vigilância da
+     Tuberculose, Micoses Endêmicas e Micobactérias não Tuberculosas /CGTM/SVSA.
+ 
