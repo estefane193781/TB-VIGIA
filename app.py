@@ -1883,9 +1883,9 @@ elif page == "Classificação de risco de abandono":
 
 
     # Exibição das orientações
-    st.markdown(f"#### {titulo_orientacao}")
     st.markdown("### Orientações ao usuário")
     st.markdown(f"#### {titulo_orientacao}")
+    st.info(orientacao)
 
     st.markdown(
         f"""
