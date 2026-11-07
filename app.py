@@ -1146,7 +1146,7 @@ if page == "Visão geral":
         use_container_width=True,
         hide_index=True
     )
-   st.warning(
+    st.warning(
         "Atenção: A taxa de abandono não é calculada nesta versão. "
         "Para apresentar uma taxa válida, é necessário definir o denominador "
         "oficial e considerar todos os desfechos elegíveis da mesma coorte, "
