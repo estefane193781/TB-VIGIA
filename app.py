@@ -1505,43 +1505,43 @@ div[data-testid="stFormSubmitButton"] > button p {
         Procure a equipe de saúde para receber orientações
         sobre o acompanhamento e a continuidade do tratamento.
         """
-        if "pontuacao" in locals() and pontuacao <= 2:
-        titulo_orientacao = "Acompanhamento de rotina"
-        orientacao = """
-        Seu resultado indica necessidade de acompanhamento habitual.
-
-        Continue comparecendo às consultas, utilizando os medicamentos
-        conforme a orientação da equipe de saúde e realizando o tratamento
-        até o final.
-
-        Caso encontre alguma dificuldade, converse com o profissional
-        responsável pelo seu acompanhamento.
-        """
-    elif "pontuacao" in locals() and pontuacao <= 5:
-        titulo_orientacao = "Acompanhamento reforçado"
-        orientacao = """
-        Seu resultado indica a necessidade de maior atenção durante
-        o tratamento.
-
-        É importante manter contato frequente com a equipe de saúde,
-        comparecer às consultas e comunicar qualquer dificuldade para
-        tomar os medicamentos ou seguir o tratamento.
-
-        O apoio dos profissionais pode ajudar a evitar interrupções.
-        """
-    elif "pontuacao" in locals():
-        titulo_orientacao = "Acompanhamento prioritário"
-        orientacao = """
-        Seu resultado indica necessidade de acompanhamento prioritário.
-
-        Procure a equipe de saúde para conversar sobre possíveis
-        dificuldades durante o tratamento e receber o apoio necessário.
-
-        A equipe poderá organizar um acompanhamento mais próximo,
-        identificar situações que dificultem a continuidade do tratamento
-        e ajudar a evitar o abandono.
-        """
-
+            if "pontuacao" in locals() and pontuacao <= 2:
+                titulo_orientacao = "Acompanhamento de rotina"
+                orientacao = """
+                Seu resultado indica necessidade de acompanhamento habitual.
+        
+                Continue comparecendo às consultas, utilizando os medicamentos
+                conforme a orientação da equipe de saúde e realizando o tratamento
+                até o final.
+        
+                Caso encontre alguma dificuldade, converse com o profissional
+                responsável pelo seu acompanhamento.
+                """
+            elif "pontuacao" in locals() and pontuacao <= 5:
+                titulo_orientacao = "Acompanhamento reforçado"
+                orientacao = """
+                Seu resultado indica a necessidade de maior atenção durante
+                o tratamento.
+        
+                É importante manter contato frequente com a equipe de saúde,
+                comparecer às consultas e comunicar qualquer dificuldade para
+                tomar os medicamentos ou seguir o tratamento.
+        
+                O apoio dos profissionais pode ajudar a evitar interrupções.
+                """
+            elif "pontuacao" in locals():
+                titulo_orientacao = "Acompanhamento prioritário"
+                orientacao = """
+                Seu resultado indica necessidade de acompanhamento prioritário.
+        
+                Procure a equipe de saúde para conversar sobre possíveis
+                dificuldades durante o tratamento e receber o apoio necessário.
+        
+                A equipe poderá organizar um acompanhamento mais próximo,
+                identificar situações que dificultem a continuidade do tratamento
+                e ajudar a evitar o abandono.
+                """
+    
 
     # Exibição das orientações
 
