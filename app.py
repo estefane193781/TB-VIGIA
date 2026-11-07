@@ -136,6 +136,87 @@ div[data-testid="stMetricValue"] span {
     background: white; border: 1px solid #E1E9F2;
     border-radius: 12px; padding: 16px; margin-bottom: 12px;
 }
+/* =========================================
+   CORREÇÃO DE CONTRASTE DOS AVISOS
+========================================= */
+
+/* Caixas st.info, st.warning, st.success e st.error */
+div[data-testid="stAlert"] {
+    background-color: #EAF2FB !important;
+    border: 1px solid #B7CBE3 !important;
+    border-radius: 10px !important;
+}
+
+/* Texto dos avisos */
+div[data-testid="stAlert"] p,
+div[data-testid="stAlert"] span,
+div[data-testid="stAlert"] div,
+div[data-testid="stAlert"] li {
+    color: #17365D !important;
+    opacity: 1 !important;
+}
+
+/* Ícones dos avisos */
+div[data-testid="stAlert"] svg {
+    color: #174A8B !important;
+    fill: #174A8B !important;
+}
+
+/* =========================================
+   CORREÇÃO DA NAVEGAÇÃO LATERAL
+========================================= */
+
+/* Fundo da navegação */
+section[data-testid="stSidebar"] {
+    background-color: #102D59 !important;
+}
+
+/* Texto do menu */
+section[data-testid="stSidebar"] label,
+section[data-testid="stSidebar"] label p,
+section[data-testid="stSidebar"] [data-testid="stWidgetLabel"] {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+}
+
+/* Opções do menu */
+section[data-testid="stSidebar"] [role="radiogroup"] label {
+    background-color: transparent !important;
+    border-radius: 8px !important;
+    padding: 7px 10px !important;
+}
+
+/* Texto das opções */
+section[data-testid="stSidebar"] [role="radiogroup"] label p {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+/* Opção selecionada */
+section[data-testid="stSidebar"] [role="radiogroup"] label:has(input:checked) {
+    background-color: #24518A !important;
+    border-left: 4px solid #FFFFFF !important;
+}
+
+/* Bolinha de seleção */
+section[data-testid="stSidebar"] [role="radiogroup"] input {
+    accent-color: #FFFFFF !important;
+}
+
+/* =========================================
+   TEXTOS DOS QUADROS INFORMATIVOS
+========================================= */
+
+.stApp [data-testid="stMain"] .stMarkdown p,
+.stApp [data-testid="stMain"] .stCaption {
+    opacity: 1 !important;
+}
+
+/* Garantir contraste nos textos dos quadros */
+.stApp [data-testid="stMain"] .stAlert * {
+    color: #17365D !important;
+    opacity: 1 !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
