@@ -1157,6 +1157,19 @@ elif page == "Fatores associados":
             box-shadow: 0 2px 7px rgba(16,45,89,0.06);
         }
         </style>
+        /* CORRIGIR VISIBILIDADE DOS QUADROS INFORMATIVOS */
+div[data-testid="stAlert"] {
+    background-color: #EAF2FB !important;
+    border: 1px solid #B8CCE5 !important;
+    border-radius: 10px !important;
+}
+
+div[data-testid="stAlert"] p,
+div[data-testid="stAlert"] span,
+div[data-testid="stAlert"] div {
+    color: #20344D !important;
+    opacity: 1 !important;
+}
         """, unsafe_allow_html=True)
 
         # PRIMEIRA LINHA
