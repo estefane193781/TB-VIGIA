@@ -1152,8 +1152,8 @@ if page == "Visão geral":
         hide_index=True
     )
 
-    st.info(
-        st.markdown("""
+   st.info(
+    st.markdown("""
 <div style="
     background-color: #DCEEFF;
     border: 1px solid #A9C9EA;
@@ -1176,9 +1176,7 @@ if page == "Visão geral":
     </span>
 </div>
 """, unsafe_allow_html=True)
-    )
-
-
+)
 # =====================================================
 # PÁGINA 2 — FATORES ASSOCIADOS
 # =====================================================
