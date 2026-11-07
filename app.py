@@ -1505,97 +1505,97 @@ div[data-testid="stFormSubmitButton"] > button p {
         Procure a equipe de saúde para receber orientações
         sobre o acompanhamento e a continuidade do tratamento.
         """
-            if "pontuacao" in locals() and pontuacao <= 2:
-                titulo_orientacao = "Acompanhamento de rotina"
-                orientacao = """
-                Seu resultado indica necessidade de acompanhamento habitual.
+                if "pontuacao" in locals() and pontuacao <= 2:
+                    titulo_orientacao = "Acompanhamento de rotina"
+                    orientacao = """
+                    Seu resultado indica necessidade de acompanhamento habitual.
+            
+                    Continue comparecendo às consultas, utilizando os medicamentos
+                    conforme a orientação da equipe de saúde e realizando o tratamento
+                    até o final.
+            
+                    Caso encontre alguma dificuldade, converse com o profissional
+                    responsável pelo seu acompanhamento.
+                    """
+                elif "pontuacao" in locals() and pontuacao <= 5:
+                        titulo_orientacao = "Acompanhamento reforçado"
+                        orientacao = """
+                        Seu resultado indica a necessidade de maior atenção durante
+                        o tratamento.
+                
+                        É importante manter contato frequente com a equipe de saúde,
+                        comparecer às consultas e comunicar qualquer dificuldade para
+                        tomar os medicamentos ou seguir o tratamento.
+            
+                        O apoio dos profissionais pode ajudar a evitar interrupções.
+                        """
+                elif "pontuacao" in locals():
+                        titulo_orientacao = "Acompanhamento prioritário"
+                        orientacao = """
+                        Seu resultado indica necessidade de acompanhamento prioritário.
+                
+                        Procure a equipe de saúde para conversar sobre possíveis
+                        dificuldades durante o tratamento e receber o apoio necessário.
+                
+                        A equipe poderá organizar um acompanhamento mais próximo,
+                        identificar situações que dificultem a continuidade do tratamento
+                        e ajudar a evitar o abandono.
+                        """
+                
         
-                Continue comparecendo às consultas, utilizando os medicamentos
-                conforme a orientação da equipe de saúde e realizando o tratamento
-                até o final.
+            # Exibição das orientações
         
-                Caso encontre alguma dificuldade, converse com o profissional
-                responsável pelo seu acompanhamento.
-                """
-            elif "pontuacao" in locals() and pontuacao <= 5:
-                titulo_orientacao = "Acompanhamento reforçado"
-                orientacao = """
-                Seu resultado indica a necessidade de maior atenção durante
-                o tratamento.
+            st.markdown("### Orientações ao usuário")
         
-                É importante manter contato frequente com a equipe de saúde,
-                comparecer às consultas e comunicar qualquer dificuldade para
-                tomar os medicamentos ou seguir o tratamento.
+            st.markdown(
+                f"""
+                <div style="
+                    background-color: #F3F5FA;
+                    border-left: 5px solid #1769AA;
+                    padding: 18px;
+                    border-radius: 9px;
+                    margin-top: 10px;
+                    margin-bottom: 18px;
+                    color: #20344D;
+                    line-height: 1.7;
+                ">
+                    {orientacao.replace(chr(10), '<br>')}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
         
-                O apoio dos profissionais pode ajudar a evitar interrupções.
-                """
-            elif "pontuacao" in locals():
-                titulo_orientacao = "Acompanhamento prioritário"
-                orientacao = """
-                Seu resultado indica necessidade de acompanhamento prioritário.
         
-                Procure a equipe de saúde para conversar sobre possíveis
-                dificuldades durante o tratamento e receber o apoio necessário.
+            # Onde buscar ajuda
+            st.markdown("""
+            <div style="
+                background-color: #EAF2FB;
+                border-left: 5px solid #1769AA;
+                padding: 16px;
+                border-radius: 9px;
+                margin-bottom: 15px;
+                color: #20344D;
+            ">
+                <h4 style="color:#102D59; margin-top:0;">
+                    Onde buscar ajuda?
+                </h4>
+                <p>
+                    Procure a Unidade Básica de Saúde (UBS) mais próxima
+                    para receber orientações, acompanhamento e apoio durante
+                    o tratamento da tuberculose. 
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
         
-                A equipe poderá organizar um acompanhamento mais próximo,
-                identificar situações que dificultem a continuidade do tratamento
-                e ajudar a evitar o abandono.
-                """
-    
-
-    # Exibição das orientações
-
-    st.markdown("### Orientações ao usuário")
-
-    st.markdown(
-        f"""
-        <div style="
-            background-color: #F3F5FA;
-            border-left: 5px solid #1769AA;
-            padding: 18px;
-            border-radius: 9px;
-            margin-top: 10px;
-            margin-bottom: 18px;
-            color: #20344D;
-            line-height: 1.7;
-        ">
-            {orientacao.replace(chr(10), '<br>')}
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-
-    # Onde buscar ajuda
-    st.markdown("""
-    <div style="
-        background-color: #EAF2FB;
-        border-left: 5px solid #1769AA;
-        padding: 16px;
-        border-radius: 9px;
-        margin-bottom: 15px;
-        color: #20344D;
-    ">
-        <h4 style="color:#102D59; margin-top:0;">
-            Onde buscar ajuda?
-        </h4>
-        <p>
-            Procure a Unidade Básica de Saúde (UBS) mais próxima
-            para receber orientações, acompanhamento e apoio durante
-            o tratamento da tuberculose. 
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
-
-
-    # Aviso importante
-    st.warning(
-        "Importante: a classificação apresentada pelo TB-VIGIA possui "
-        "finalidade exclusivamente educativa e demonstrativa. A pontuação "
-        "não representa diagnóstico nem previsão clínica validada de abandono "
-        "do tratamento. O resultado não substitui a avaliação individual "
-        "do paciente nem a decisão dos profissionais de saúde."
-    )
+        
+            # Aviso importante
+            st.warning(
+                "Importante: a classificação apresentada pelo TB-VIGIA possui "
+                "finalidade exclusivamente educativa e demonstrativa. A pontuação "
+                "não representa diagnóstico nem previsão clínica validada de abandono "
+                "do tratamento. O resultado não substitui a avaliação individual "
+                "do paciente nem a decisão dos profissionais de saúde."
+            )
 
     # =====================================================
 # PÁGINA 5 — RELATÓRIOS
