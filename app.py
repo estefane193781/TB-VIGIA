@@ -1151,8 +1151,8 @@ if page == "Visão geral":
         use_container_width=True,
         hide_index=True
     )
-   st.markdown("""
-    <div style="
+    st.markdown("""
+        <div style="
         background-color: #DCEEFF;
         border: 1px solid #A9C9EA;
         border-left: 6px solid #1769AA;
