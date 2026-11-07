@@ -229,11 +229,6 @@ section[data-testid="stSidebar"] [role="radiogroup"] input {
     opacity: 1 !important;
 }
 
-/* Garantir contraste nos textos dos quadros */
-.stApp [data-testid="stMain"] .stAlert * {
-    color: #A9C9EA !important;
-    opacity: 1 !important;
-}
 </style>
 """, unsafe_allow_html=True)
 
