@@ -90,7 +90,25 @@ section[data-testid="stSidebar"] [data-testid="stVerticalBlock"] {
 section[data-testid="stSidebar"] * {
     color: #FFFFFF !important;
 }
+/* CORRIGIR VISIBILIDADE DA NAVEGAÇÃO */
+section[data-testid="stSidebar"] [data-testid="stSidebarNav"] a {
+    color: #FFFFFF !important;
+    background-color: transparent !important;
+}
 
+section[data-testid="stSidebar"] [data-testid="stSidebarNav"] span {
+    color: #FFFFFF !important;
+}
+
+section[data-testid="stSidebar"] [data-testid="stSidebarNav"] svg {
+    fill: #FFFFFF !important;
+    color: #FFFFFF !important;
+}
+
+section[data-testid="stSidebar"] [data-testid="stSidebarNav"] a[aria-current="page"] {
+    background-color: #174A8B !important;
+    color: #FFFFFF !important;
+}
 /* ÁREA PRINCIPAL */
 section[data-testid="stMain"] {
     min-width: 0 !important;
