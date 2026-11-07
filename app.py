@@ -143,7 +143,7 @@ div[data-testid="stMetricValue"] span {
 /* Caixas st.info, st.warning, st.success e st.error */
 div[data-testid="stAlert"] {
     background-color: #EAF2FB !important;
-    border: 1px solid #B7CBE3 !important;
+    border: 1px solid #A9C9EA!important;
     border-radius: 10px !important;
 }
 
