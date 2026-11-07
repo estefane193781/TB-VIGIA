@@ -1883,11 +1883,11 @@ elif page == "Classificação de risco de abandono":
 
 
     # Exibição das orientações
-    st.markdown("### Orientações ao usuário")
-    st.markdown(f"#### {titulo_orientacao}")
-    st.info(orientacao)
-
-    st.markdown(
+            st.markdown("### Orientações ao usuário")
+            st.markdown(f"#### {titulo_orientacao}")
+            st.info(orientacao)
+        
+            st.markdown(
         f"""
         <div style="
             background-color: #F3F5FA;
@@ -1907,25 +1907,25 @@ elif page == "Classificação de risco de abandono":
 
 
     # Onde buscar ajuda
-    st.markdown("""
-    <div style="
-        background-color: #EAF2FB;
-        border-left: 5px solid #1769AA;
-        padding: 16px;
-        border-radius: 9px;
-        margin-bottom: 15px;
-        color: #20344D;
-    ">
-        <h4 style="color:#102D59; margin-top:0;">
-            Onde buscar ajuda?
-        </h4>
-        <p>
-            Procure a Unidade Básica de Saúde (UBS) mais próxima
-            para receber orientações, acompanhamento e apoio durante
-            o tratamento da tuberculose. 
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
+            st.markdown("""
+            <div style="
+                background-color: #EAF2FB;
+                border-left: 5px solid #1769AA;
+                padding: 16px;
+                border-radius: 9px;
+                margin-bottom: 15px;
+                color: #20344D;
+            ">
+                <h4 style="color:#102D59; margin-top:0;">
+                    Onde buscar ajuda?
+                </h4>
+                <p>
+                    Procure a Unidade Básica de Saúde (UBS) mais próxima
+                    para receber orientações, acompanhamento e apoio durante
+                    o tratamento da tuberculose. 
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
 
 
     # Aviso importante
