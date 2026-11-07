@@ -1146,29 +1146,12 @@ if page == "Visão geral":
         use_container_width=True,
         hide_index=True
     )
-    st.markdown("""
-        <div style="
-        background-color: #DCEEFF;
-        border: 1px solid #A9C9EA;
-        border-left: 6px solid #1769AA;
-        border-radius: 10px;
-        padding: 18px;
-        margin-top: 15px;
-        color: #17365D !important;
-        font-size: 15px;
-        line-height: 1.6;
-    ">
-        <strong style="color: #102D59 !important;">
-            Atenção:
-        </strong>
-        <span style="color: #17365D !important;">
-            A taxa de abandono não é calculada nesta versão. Para apresentar
-            uma taxa válida, é necessário definir o denominador oficial e
-            considerar todos os desfechos elegíveis da mesma coorte, incluindo
-            as demais categorias de encerramento e a completude dos registros.
-        </span>
-    </div>
-    """, unsafe_allow_html=True)
+   st.warning(
+        "Atenção: A taxa de abandono não é calculada nesta versão. "
+        "Para apresentar uma taxa válida, é necessário definir o denominador "
+        "oficial e considerar todos os desfechos elegíveis da mesma coorte, "
+        "incluindo as demais categorias de encerramento e a completude dos registros."
+    )
 # =====================================================
 # PÁGINA 2 — FATORES ASSOCIADOS
 # =====================================================
