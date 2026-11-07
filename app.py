@@ -1499,6 +1499,12 @@ div[data-testid="stFormSubmitButton"] > button p {
 # =====================================================
 # A classificação e as orientações são calculadas dentro do formulário
 # e exibidas logo em seguida, sem duplicar blocos condicionais.
+    titulo_orientacao = "Orientação"
+orientacao = """
+A classificação demonstrativa foi calculada.
+Procure a equipe de saúde para receber orientações
+sobre o acompanhamento e a continuidade do tratamento.
+"""
     if "pontuacao" in locals() and pontuacao <= 2:
         titulo_orientacao = "Acompanhamento de rotina"
         orientacao = """
@@ -1538,10 +1544,8 @@ div[data-testid="stFormSubmitButton"] > button p {
 
 
     # Exibição das orientações
-    titulo_orientacao = "Orientação"
-    st.markdown(f"#### {titulo_orientacao}")
+
     st.markdown("### Orientações ao usuário")
-    st.markdown(f"#### {titulo_orientacao}")
 
     st.markdown(
         f"""
