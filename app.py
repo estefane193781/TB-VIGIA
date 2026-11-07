@@ -1538,6 +1538,7 @@ div[data-testid="stFormSubmitButton"] > button p {
 
 
     # Exibição das orientações
+    titulo_orientacao = "Orientação"
     st.markdown(f"#### {titulo_orientacao}")
     st.markdown("### Orientações ao usuário")
     st.markdown(f"#### {titulo_orientacao}")
